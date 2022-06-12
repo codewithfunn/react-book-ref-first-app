@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
-
+// js object creation
+const  welcome ={
+  greeting: 'Hey',
+  title:'React'
+};
 function App() {
+  console.log(welcome)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <h1>
+        {welcome.greeting} {welcome.title}      
+       </h1>
+
+       <label htmlFor="Search">Search: </label>
+       <input type="text" id='search'  />
     </div>
   );
 }
