@@ -1,15 +1,14 @@
 import './App.css';
-// js object creation
-const  welcome ={
-  greeting: 'Hey',
-  title:'React'
-};
+// func in js
+function getTitle(title){
+  return title;
+}
 function App() {
-  console.log(welcome)
+  
   return (
     <div className="App">
        <h1>
-        {welcome.greeting} {welcome.title}      
+        hello {getTitle('React')}      
        </h1>
 
        <label htmlFor="Search">Search: </label>
