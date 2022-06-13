@@ -1,39 +1,11 @@
-import List from './components/List';
+// import List from './components/List';
 import './App.css';
-// javaScript func
-
-// function defination
-// function(){...}
-
-// arrow function defination
-// const ()=>{...}
-
-// You can remove the parentheses in an arrow function expression if it has only one argument, but multiple arguments require parentheses:
-// allowed
-// const item =>{...}
-
-// allowed 
-// const (item)=>{...}
-
-// not allowed
-// const item, index =>{...}
-
-// allowed
-// const (item , index)=>{...}
-
-//--------------------------------- 
-// concise body, an implicit return statement
-
-// with block body
-// count=>{
-//   // perform any task in b/w
-// }
-
-// with concise body
-// count => count+1;
-// --------------------------------
-
-
+//  handler Function
+//*** The synthetic event is essentially a wrapper around the browser’s native event⁵¹, with more functions that are useful to prevent native browser behavior (e.g. refreshing a page after the user clicks a form’s   submit button). ****/
+const handleChange =(event)=>{
+    console.log("synthetic event : "+ event);
+    console.log('value: '+event.target.value)
+}
 function App() {
  
   return (
@@ -41,7 +13,8 @@ function App() {
     <div className=" my-6 App ">
        <label htmlFor="Search " className=' '>Search: </label>
        <input type="text" id='search' className='hover:border-2 hover:border-red-200 mx-auto'  />
-       <List/>
+       <input type="text" name='input' onChange={handleChange} placeholder="search"/>
+       {/* <List/> */}
     </div>
   );
 }
