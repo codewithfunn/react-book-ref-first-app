@@ -1,26 +1,39 @@
 import List from './components/List';
 import './App.css';
-// javaScript Classes
+// javaScript func
 
-// Class Defination
-class Developer{
-  constructor(firstName, lastName){
-    this.firstName = firstName;
-    this.lastName = lastName;
-  }
-  getName(){
-    return this.firstName +' ' + this.lastName
-  }
-}
+// function defination
+// function(){...}
 
-//  Class initialization
-const jaspreet = new Developer('Jaspreet','Singh')
+// arrow function defination
+// const ()=>{...}
 
-console.log(jaspreet.getName());
+// You can remove the parentheses in an arrow function expression if it has only one argument, but multiple arguments require parentheses:
+// allowed
+// const item =>{...}
 
-// another class Instantiation
-const simran = new Developer("Simran" , "kaur")
-console.log(simran.getName())
+// allowed 
+// const (item)=>{...}
+
+// not allowed
+// const item, index =>{...}
+
+// allowed
+// const (item , index)=>{...}
+
+//--------------------------------- 
+// concise body, an implicit return statement
+
+// with block body
+// count=>{
+//   // perform any task in b/w
+// }
+
+// with concise body
+// count => count+1;
+// --------------------------------
+
+
 function App() {
  
   return (
@@ -28,10 +41,7 @@ function App() {
     <div className=" my-6 App ">
        <label htmlFor="Search " className=' '>Search: </label>
        <input type="text" id='search' className='hover:border-2 hover:border-red-200 mx-auto'  />
-       {/* Creating an instance of List Component */}
-      <List/>
-      {/* Creating an another instance of List Component */}
-      <List/>
+       <List/>
     </div>
   );
 }
