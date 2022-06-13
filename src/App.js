@@ -1,7 +1,26 @@
-// import List from './components/List';
+import List from './components/List';
 import './App.css';
-//  handler Function
-//*** The synthetic event is essentially a wrapper around the browser’s native event⁵¹, with more functions that are useful to prevent native browser behavior (e.g. refreshing a page after the user clicks a form’s   submit button). ****/
+
+// props in react js
+const stories = [
+  {
+    title: 'sunny',
+    url: 'https://reactjs.org/',
+    author: 'Jordan Walke',
+    num_comments: 3,
+    points: 4,
+    objectID: 0,
+  },
+  {
+    title: 'Redux',
+    url: 'https://redux.js.org/',
+    author: 'Dan Abramov, Andrew Clark',
+    num_comments: 2,
+    points: 5,
+    objectID: 1,
+  },
+];
+
 const handleChange =(event)=>{
     console.log("synthetic event : "+ event);
     console.log('value: '+event.target.value)
@@ -9,12 +28,13 @@ const handleChange =(event)=>{
 function App() {
  
   return (
-    // a JavaScript class definition exists, one can create multiple instances of it. It is similar to a React component, which has only one component definition, but can have multiple component instances:
+ 
     <div className=" my-6 App ">
-       <label htmlFor="Search " className=' '>Search: </label>
-       <input type="text" id='search' className='hover:border-2 hover:border-red-200 mx-auto'  />
-       <input type="text" name='input' onChange={handleChange} placeholder="search"/>
-       {/* <List/> */}
+        <h1>My Hacker Stories</h1>
+        <label htmlFor="search">Search: </label>
+        <input id="search" type="text" onChange={handleChange} />
+        <hr />
+       <List list ={stories}/>
     </div>
   );
 }
